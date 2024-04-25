@@ -1,0 +1,59 @@
+#include<SoftwareSerial.h>
+const int Light1 = 6; 
+const int Light2 = 5;  
+SoftwareSerial bt(2, 3);
+void setup() {
+  bt.begin(9600); 
+  Serial.begin(9600);
+   pinMode(Light1, OUTPUT);
+   pinMode(Light2, OUTPUT);
+   digitalWrite(Light1, HIGH);
+   digitalWrite(Light2, HIGH);
+}
+void loop() {
+  String data="";
+  char ch;
+  while (bt.available())
+    { ch = bt.read(); 
+      data=data+ch;
+    }
+   Serial.print(data);
+
+    if ((data == "turn on both lights")||(data == "turn on light 1 and 2")||(data == "turn on light on and to")||(data == "turn on light van and too")||(data == "turn on light one and two")||(data == "turn on lights"))               
+    {
+      delay(500);    
+      digitalWrite(Light1,LOW);
+      digitalWrite(Light2,LOW);
+    }
+
+    if ((data == "turn off both lights")||(data == "turn off light 1 and 2")||(data == "turn off light on and to")||(data == "turn off light van and too")||(data == "turn off light one and two")||(data == "turn off lights"))               
+    {
+      delay(500);
+      digitalWrite(Light1,HIGH);
+      digitalWrite(Light2,HIGH);
+    }
+  
+    if ((data == "turn on light one")||(data == "turn on light 1")||(data == "turn on light on")||(data == "turn on light van"))               
+    {
+      delay(500);      
+      digitalWrite(Light1,LOW);
+    }
+
+    else if ((data == "turn off light one")||(data == "turn off light 1")||(data == "turn off light van")||(data == "turn off light on"))
+    {
+      delay(500);
+      digitalWrite(Light1,HIGH);
+    }  
+
+    else if ((data == "turn on light two")||(data == "turn on light to")||(data == "turn on light 2")||(data == "turn on light too")) 
+    {
+      delay(500);
+      digitalWrite(Light2,LOW);
+    }
+
+    else if ((data== "turn off light two")||(data == "turn off light to")||(data == "turn off light 2")||(data == "turn off light too")) 
+    {
+      delay(500);
+      digitalWrite(Light2,HIGH);
+    }
+}
