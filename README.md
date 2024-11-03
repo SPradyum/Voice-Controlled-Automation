@@ -15,7 +15,7 @@ Playstore - ArduinoBluetooth - Tejas Bhong : https://play.google.com/store/apps/
 
 Instructions:
 - To have a final output visual, click the link below:
-https://www.linkedin.com/feed/update/urn:li:activity:7189355759028092928/
+[https://www.linkedin.com/feed/update/urn:li:activity:7189355759028092928/](https://www.linkedin.com/posts/pradyum-sanyasi-6a9b03142_iot-smarthome-voicecontrol-activity-7235707273342316546-CJmN/?utm_source=share&utm_medium=member_desktop)
 - Make sure to speak the voice command clearly or change as per requirement.
 - Follow the circuit diagram for creating the proper connection.
 - Supply direct electricity to the BULBs only.
